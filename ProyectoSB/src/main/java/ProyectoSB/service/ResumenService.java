@@ -6,6 +6,6 @@ import ProyectoSB.domain.Resumen;
 
 
 public interface ResumenService {
-	List<Resumen> getResumenes();
-
+	List<Resumen> getResumenes(int anio, int mes);
+	List<Resumen> getResumenenTotal();
 }

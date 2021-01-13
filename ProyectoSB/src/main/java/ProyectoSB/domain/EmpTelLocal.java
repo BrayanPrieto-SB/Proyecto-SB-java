@@ -6,6 +6,7 @@ public class EmpTelLocal {
 	private String nombre;
 	private String correo;
 	private int valor_minuto;
+	private int convenio_no;
 	
 	public Long getEmpTelLocal_nit() {
 		return empTelLocal_nit;
@@ -31,20 +32,29 @@ public class EmpTelLocal {
 	public void setValor_minuto(int valor_minuto) {
 		this.valor_minuto = valor_minuto;
 	}
-	public EmpTelLocal(Long empTelLocal_nit, String nombre, String correo, int valor_minuto) {
+
+	public EmpTelLocal() {
+		super();
+	}
+
+	public EmpTelLocal(Long empTelLocal_nit, String nombre, String correo, int valor_minuto, int convenio_no) {
 		super();
 		this.empTelLocal_nit = empTelLocal_nit;
 		this.nombre = nombre;
 		this.correo = correo;
 		this.valor_minuto = valor_minuto;
-	}
-	public EmpTelLocal() {
-		super();
+		this.convenio_no = convenio_no;
 	}
 	@Override
 	public String toString() {
 		return "EmpTelLocal [empTelLocal_nit=" + empTelLocal_nit + ", nombre=" + nombre + ", correo=" + correo
-				+ ", valor_minuto=" + valor_minuto + "]";
+				+ ", valor_minuto=" + valor_minuto + ", convenio_no=" + convenio_no + "]";
+	}
+	public int getConvenio_no() {
+		return convenio_no;
+	}
+	public void setConvenio_no(int convenio_no) {
+		this.convenio_no = convenio_no;
 	}
 	
 

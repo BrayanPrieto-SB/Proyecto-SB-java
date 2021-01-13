@@ -15,7 +15,11 @@ public class ResumenImpl implements ResumenService{
 	
 	
 	@Override
-	public List<Resumen> getResumenes() {
-		return resumenRepository.getResumenes();
+	public List<Resumen> getResumenes(int anio, int mes) {
+		return resumenRepository.getResumenes(anio,mes);
+	}
+	@Override
+	public List<Resumen> getResumenenTotal() {
+		return resumenRepository.getResumenenTotal();
 	}
 }

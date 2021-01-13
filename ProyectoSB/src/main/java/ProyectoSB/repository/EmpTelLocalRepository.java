@@ -44,17 +44,13 @@ public class EmpTelLocalRepository {
 		  List<EmpTelLocal> empresas =jdbcTemplate.query(sql,(rs, rowNum)-> new EmpTelLocal(rs.getLong("emp_tel_local_nit"),
 				  rs.getString("nombre"),
 				  rs.getString("correo"),
-				  rs.getInt("valor_minuto")),nit);
+				  rs.getInt("valor_minuto"),
+				  rs.getInt("convenio_no")),nit);
 		  return empresas;
 				  
 	 }
 		  
 	 
-	 
-
-	
-		  
-		  
 	 public void crearConvenio(EmpTelLocal emp ) {
 		 	EmpTelLocal empresa = emp;
 	        simpleJdbcCall = new SimpleJdbcCall(jdbcTemplate)
